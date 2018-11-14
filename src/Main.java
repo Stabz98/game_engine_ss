@@ -5,7 +5,7 @@ public class Main extends PApplet {
 	public static void main(String[] args) {
 		PApplet.main("Main");
 	}
-	Launcher launcher;
+	public Launcher launcher;
 	public void setup() {
 		background(0);
 		launcher = new Launcher(this);
@@ -17,5 +17,11 @@ public class Main extends PApplet {
 	public void settings() {
 		size(640,480);
 	}
-	public void keyPressed() { launcher.keyPressed(key, keyCode); }
+	public void keyPressed() {
+		launcher.keyPressed(key, keyCode);
+	}
+	public void keyReleased() {
+		launcher.keyReleased(key,  keyCode);
+	}
+	
 }

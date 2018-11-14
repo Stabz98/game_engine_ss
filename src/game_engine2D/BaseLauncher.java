@@ -1,7 +1,7 @@
 package game_engine2D;
 import processing.core.PApplet;
 
-public abstract class BaseLauncher {
+public class BaseLauncher {
 	public PApplet parent;
 	
 	public BaseLauncher(PApplet p) {
@@ -17,6 +17,9 @@ public abstract class BaseLauncher {
 	}
 	public void keyPressed(char key, int keyCode) {
 		gameManager.keyPressed(key, keyCode);
+	}
+	public void keyReleased(char key, int keyCode) {
+		gameManager.keyReleased(key, keyCode);
 	}
 
 }
