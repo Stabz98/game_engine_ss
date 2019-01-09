@@ -17,6 +17,7 @@ public class Main extends PApplet {
 	public void settings() {
 		size(640,480);
 	}
+	//shut up nerd
 	public void keyPressed() {
 		launcher.keyPressed(key, keyCode);
 	}

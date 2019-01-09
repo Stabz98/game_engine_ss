@@ -13,25 +13,25 @@ public class BoxCollider2D extends ProcessingEntity {
 		 BoundingBox prev_bb;
 		 prev_bb = this.transform.PreviousWorldBoundingBox();
 		 BoundingBox tile_bb = hitInfo.boundingBox;
-		 if (this.transform.position.y > tile_bb.top && this.transform.position.y < tile_bb.bottom) {
+		 if (this.transform.position.y > tile_bb.top && this.transform.position.y < tile_bb.base) {
 			 
 			 if(new_bb.left < tile_bb.right && new_bb.right > tile_bb.right) {
 				 hitInfo.hitSide = SIDES.RIGHT;
-				 hitInfo.didHit = true;
+				 hitInfo.beenHit = true;
 			 }
 			 if (new_bb.left < tile_bb.left && new_bb.right > tile_bb.left ) {
 				 hitInfo.hitSide = SIDES.LEFT;
-				 hitInfo.didHit = true;
+				 hitInfo.beenHit = true;
 			 }
 		 }
 		 if (new_bb.right > tile_bb.left && new_bb.left < tile_bb.right) {
-			 if (new_bb.bottom > tile_bb.top && prev_bb.top < tile_bb.top) {
-				 hitInfo.hitSide = SIDES.BOTTOM;
-				 hitInfo.didHit = true;
+			 if (new_bb.base > tile_bb.top && prev_bb.top < tile_bb.top) {
+				 hitInfo.hitSide = SIDES.BASE;
+				 hitInfo.beenHit = true;
 			 }
-			 if (new_bb.top < tile_bb.bottom && prev_bb.bottom > tile_bb.bottom) {
+			 if (new_bb.top < tile_bb.base && prev_bb.base > tile_bb.base) {
 				 hitInfo.hitSide = SIDES.TOP;
-				 hitInfo.didHit = true;
+				 hitInfo.beenHit = true;
 			 }
 		 }else {
 			 

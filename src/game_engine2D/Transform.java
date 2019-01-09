@@ -14,23 +14,23 @@ public class Transform {
 	public BoundingBox boundingBox = new BoundingBox(-1,1,-1,1);
 	public BoundingBox PreviousWorldBoundingBox() {
 		BoundingBox bb = new BoundingBox();
-		bb.center_x = prev_position.x;
-		bb.center_y = prev_position.y;
+		bb.mid_x = prev_position.x;
+		bb.mid_y = prev_position.y;
 		bb.left = prev_position.x + boundingBox.left;
 		bb.right = prev_position.x + boundingBox.right;
 		bb.top = prev_position.y + boundingBox.top;
-		bb.bottom = prev_position.y + boundingBox.bottom;
+		bb.base = prev_position.y + boundingBox.base;
 		return bb;
 		
 	}
 	public BoundingBox NewWorldBoundingBox() {
 		BoundingBox bb = new BoundingBox();
-		bb.center_x = position.x;
-		bb.center_y = position.y;
+		bb.mid_x = position.x;
+		bb.mid_y = position.y;
 		bb.left = position.x + boundingBox.left;
 		bb.right = position.x + boundingBox.right;
 		bb.top = position.y + boundingBox.top;
-		bb.bottom = position.y + boundingBox.bottom;
+		bb.base = position.y + boundingBox.base;
 		return bb;
 	}
 	

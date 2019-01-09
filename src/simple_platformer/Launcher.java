@@ -10,7 +10,7 @@ public class Launcher extends BaseLauncher {
 	}
 	
 	public void StartGame() {
-		super.StartGame();
+		super.LaunchGame();
 		Player player = new Player(parent, parent.width/2,parent.height/2,60, 60);
 		player.start();
 		this.gameManager.addObject(player);
@@ -55,22 +55,22 @@ public class Launcher extends BaseLauncher {
 		
 		platform = new Tile(parent, parent.width/2, parent.height - 10,parent.width,20);
 		platform.start();
-		platform.strokeColour = parent.color(0,200,20);
-		platform.fillColour = parent.color(0,200,20);
+		platform.secondaryColour = parent.color(0,200,20);
+		platform.primaryColour = parent.color(0,200,20);
 		this.gameManager.addObject(platform);
 		this.gameManager.addGameBoundingBoxes(platform);
 		
 		platform = new Tile(parent,0, parent.height/2,20, parent.height);
 		platform.start();
-		platform.strokeColour = parent.color(0,200,20);
-		platform.fillColour = parent.color(0,200,20);
+		platform.secondaryColour = parent.color(0,200,20);
+		platform.primaryColour = parent.color(0,200,20);
 		this.gameManager.addObject(platform);
 		this.gameManager.addGameBoundingBoxes(platform);
 		
 		platform = new Tile(parent, parent.width, parent.height/2,20, parent.height);
 		platform.start();
-		platform.strokeColour = parent.color(0,200,20);
-		platform.fillColour = parent.color(0,200,20);
+		platform.secondaryColour = parent.color(0,200,20);
+		platform.primaryColour = parent.color(0,200,20);
 		this.gameManager.addObject(platform);
 		this.gameManager.addGameBoundingBoxes(platform);
 	}

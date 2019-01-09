@@ -62,14 +62,14 @@ public class Physics2D extends GameComponent {
 			HitInfo hitInfo = new HitInfo();
 			hitInfo.boundingBox = GameManager.gameBoundingBoxes.get(i);
 			hitInfo = this.boxCollider2D.checkCollision(hitInfo);
-			if(hitInfo.didHit) {
+			if(hitInfo.beenHit) {
 				switch (hitInfo.hitSide) {
 				case TOP:
 					this.velocity.y = 0f;
-					this.transform.position.y = hitInfo.boundingBox.bottom + this.transform.boundingBox.bottom;
+					this.transform.position.y = hitInfo.boundingBox.base + this.transform.boundingBox.base;
 					
 					break;
-				case BOTTOM:
+				case BASE:
 					this.velocity.y = 0f;
 					this.transform.position.y = hitInfo.boundingBox.top + this.transform.boundingBox.top;
 					if(!isGrounded) {

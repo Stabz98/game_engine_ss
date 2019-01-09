@@ -4,6 +4,6 @@ public class HitInfo {
 	
 	public SIDES hitSide = SIDES.NONE;
 	public BoundingBox boundingBox;
-	public boolean didHit = false;
+	public boolean beenHit = false;
 
 }

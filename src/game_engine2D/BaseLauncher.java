@@ -9,17 +9,18 @@ public class BaseLauncher {
 	}
 	
 	public GameManager gameManager;
-	public void StartGame() {
-		gameManager = new GameManager(parent);
-	}
 	public void UpdateAll() {
 		gameManager.UpdateAll();
 	}
-	public void keyPressed(char key, int keyCode) {
-		gameManager.keyPressed(key, keyCode);
+	public void LaunchGame() {
+		gameManager = new GameManager(parent);
 	}
 	public void keyReleased(char key, int keyCode) {
 		gameManager.keyReleased(key, keyCode);
 	}
+	public void keyPressed(char key, int keyCode) {
+		gameManager.keyPressed(key, keyCode);
+	}
+	
 
 }
