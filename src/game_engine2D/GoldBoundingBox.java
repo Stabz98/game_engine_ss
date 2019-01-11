@@ -2,13 +2,11 @@ package game_engine2D;
 
 import processing.core.PVector;
 
-public class BoundingBox {
-	public BoundingBox() {
+public class GoldBoundingBox {
+	public GoldBoundingBox() {
 
-	}
+	} // This is the Bounding Box for my gold blocks
 
-	// This code helps build a box around a tile that assists with collision
-	// detection
 	public float mid_x;
 	public float mid_y;
 	public float left;
@@ -25,7 +23,7 @@ public class BoundingBox {
 		this.mid_y = 0;
 	}
 
-	public BoundingBox(int _l, int _r, int _t, int _b) {
+	public GoldBoundingBox(int _l, int _r, int _t, int _b) {
 		this.left = _l;
 		this.right = _r;
 		this.top = _t;

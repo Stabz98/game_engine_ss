@@ -2,24 +2,23 @@ package game_engine2D;
 
 import processing.core.PApplet;
 
-public class Tile extends Sprite {
+public class Gold extends Sprite {
 
 	public int secondaryColour;
 	public int primaryColour;
 
-	// this creates the tiles
-	public Tile(PApplet p, float x, float y, float w, float h) {
-		super(p, x, y);
+	public Gold(PApplet p, float x, float y, float w, float h) {
+		super(p, x, y);// here I am creating my gold blocks
 		this.size.x = w;
 		this.size.y = h;
-		this.secondaryColour = parent.color(255, 255, 255);
-		this.primaryColour = parent.color(0, 255, 12);
+		this.secondaryColour = parent.color(251, 227, 10);
+		this.primaryColour = parent.color(205, 183, 46);
 	}
 
 	public void start() {
 		super.start();
 
-		this.transform.boundingBox.fromSize(size);
+		this.transform.goldBoundingBox.fromSize(size);
 	}
 
 	public void update() {
